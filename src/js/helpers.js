@@ -1,7 +1,7 @@
 /**
  * Convert group name, token name and possible prefix into camelCased string, joining everything together
  */
-Pulsar.registerFunction(
+ Pulsar.registerFunction(
   "readableVariableName",
   function (token, tokenGroup, prefix) {
     // Create array with all path segments and token name at the end
@@ -22,7 +22,6 @@ Pulsar.registerFunction(
      sentence = sentence
       .toLowerCase()
       .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase())
-      .replace(/\s/g, '-')
     
     // only allow letters, digits, underscore and hyphen
     sentence = sentence.replace(/[^a-zA-Z0-9_-]/g, '_')
@@ -33,6 +32,13 @@ Pulsar.registerFunction(
     }
 
     return sentence;
+  }
+);
+
+Pulsar.registerFunction(
+  "readableVariableNumber",
+  function (token) {
+    return token.name.split(' ').at(-1);
   }
 );
 

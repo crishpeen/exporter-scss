@@ -42,7 +42,7 @@ Rendered as:
   {[ if mapName ]}
     ${{ mapName }}: (
       {[ for token in tokens ]}
-        {{ token.name }}: ${[ inject "rendered-name" context token /]},
+        {{ readableVariableNumber(token) }}: ${[ inject "rendered-name" context token /]},
       {[/]}
     ) !default;
   {[/]}
