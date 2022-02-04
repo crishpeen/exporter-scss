@@ -27,6 +27,7 @@ Rendered as:
   {[ inject "rendered-description" context token /]}
   ${[ inject "rendered-name" context token /]}: {[ inject "rendered-value" context token /]} !default;
 {[/]}
+
 {[ if tokens.count() > 0 ]}
   {[ let mapName = "" /]}
   {[ switch tokens[0].tokenType ]}
@@ -38,12 +39,10 @@ Rendered as:
   {[ case "Gradient" ]}{[ mapName = behavior.gradientMapName /]}  
   {[ default ]}{[ mapName = "" /]}  
   {[/]}
-
-
   {[ if mapName ]}
     ${{ mapName }}: (
       {[ for token in tokens ]}
-        {[ inject "rendered-name" context token /]}: ${[ inject "rendered-name" context token /]},
+        {{ token.name }}: ${[ inject "rendered-name" context token /]},
       {[/]}
     ) !default;
   {[/]}
