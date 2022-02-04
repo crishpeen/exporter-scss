@@ -59,11 +59,17 @@ Pulsar.registerFunction("gradientAngle", function(from, to) {
  * Behavior configuration of the exporter
  * Prefixes: Add prefix for each category of the tokens. For example, all colors can start with "color, if needed"
  */
-Pulsar.registerPayload("behavior", {
+ Pulsar.registerPayload("behavior", {
   colorTokenPrefix: "color",
+  colorMapName: "colors",
   borderTokenPrefix: "border",
+  borderMapName: "borders",
   gradientTokenPrefix: "gradient",
+  gradientMapName: "gradients",
   measureTokenPrefix: "measure",
+  measureMapName: "measures",
   shadowTokenPrefix: "",
+  shadowMapName: "shadows",
   typographyTokenPrefix: "typography",
+  typographyMapName: "typographies",
 });

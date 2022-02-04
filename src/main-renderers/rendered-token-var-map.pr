@@ -25,7 +25,30 @@ Rendered as:
 {[ let tokens = context /]}
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  ${[ inject "rendered-name" context token /]}: {[ inject "rendered-value" context token /]};
+  ${[ inject "rendered-name" context token /]}: {[ inject "rendered-value" context token /]} !default;
     
 
+{[/]}
+{[ if tokens.count() > 0 ]}
+  {[ let mapName = "" /]}
+  {[ switch tokens[0].tokenType ]}
+  {[ case "Color" ]}{[ mapName = mapNames.colorMapName /]}
+  {[ case "Typography" ]}{[ mapName = mapNames.typographyMapName /]}  
+  {[ case "Shadow" ]}{[ mapName = mapNames.shadowMapName /]}  
+  {[ case "Border" ]}{[ mapName = mapNames.borderMapName /]}  
+  {[ case "Measure" ]}{[ mapName = mapNames.measureMapName /]}  
+  {[ case "Gradient" ]}{[ mapName = mapNames.gradientMapName /]}  
+  {[ default ]}{[ mapName = "" /]}  
+  {[/]}
+
+
+  {[ if mapName ]}
+    ${{ mapName }}: (
+      {[ for token in tokens ]}
+        {[ inject "rendered-name" context token /]}: {[ inject "rendered-value" context token /]} !default,
+
+
+      {[/]}
+    ) 
+  {[/]}
 {[/]}
