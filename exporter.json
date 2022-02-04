@@ -1,9 +1,9 @@
 {
-    "id": "io.supernova.scss",
-    "name": "SCSS",
+    "id": "spirit.supernova.scss",
+    "name": "Spirit SCSS",
     "description": "SCSS token and style exporter",
-    "author": "Ivan Terpugov & Jiri Trecak",
-    "organization": "Supernova",
+    "author": "Ivan Terpugov & Jiri Trecak & Jan Kryspin",
+    "organization": "LMC",
     "source_dir": "src",
     "version": "1.2",
     "config": {
@@ -19,6 +19,7 @@
     "tags": [
         "SCSS",
         "Tokens",
-        "Styles"
+        "Styles",
+        "Spirit"
     ]
 }
