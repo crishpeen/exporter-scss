@@ -1,0 +1,13 @@
+{
+  "workspaceId": "8830",
+  "designSystemId": "10180",
+  "designSystemVersionId": "10368",
+  "brandId": "9731",
+  "exporterId": "90",
+  "workspaceName": "Spirit",
+  "designSystemName": "Spirit",
+  "designSystemVersionName": "Shared draft",
+  "exporterName": "Spirit SCSS",
+  "write_to": "/",
+  "description": "Note to our fellow developers: Install Supernova integration from the VSCode marketplace and then our  Spirit SCSS exporter will synchronize design data and generate appropriate code from the  Shared draft design system every time you request it through the extension interface, fully automatically."
+}
