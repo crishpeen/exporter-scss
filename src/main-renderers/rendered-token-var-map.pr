@@ -32,12 +32,12 @@ Rendered as:
 {[ if tokens.count() > 0 ]}
   {[ let mapName = "" /]}
   {[ switch tokens[0].tokenType ]}
-  {[ case "Color" ]}{[ mapName = mapNames.colorMapName /]}
-  {[ case "Typography" ]}{[ mapName = mapNames.typographyMapName /]}  
-  {[ case "Shadow" ]}{[ mapName = mapNames.shadowMapName /]}  
-  {[ case "Border" ]}{[ mapName = mapNames.borderMapName /]}  
-  {[ case "Measure" ]}{[ mapName = mapNames.measureMapName /]}  
-  {[ case "Gradient" ]}{[ mapName = mapNames.gradientMapName /]}  
+  {[ case "Color" ]}{[ mapName = behavior.colorMapName /]}
+  {[ case "Typography" ]}{[ mapName = behavior.typographyMapName /]}  
+  {[ case "Shadow" ]}{[ mapName = behavior.shadowMapName /]}  
+  {[ case "Border" ]}{[ mapName = behavior.borderMapName /]}  
+  {[ case "Measure" ]}{[ mapName = behavior.measureMapName /]}  
+  {[ case "Gradient" ]}{[ mapName = behavior.gradientMapName /]}  
   {[ default ]}{[ mapName = "" /]}  
   {[/]}
 
